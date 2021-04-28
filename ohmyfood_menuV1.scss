@@ -1,0 +1,270 @@
+@font-face
+{
+    font-family: 'shrikhand';   
+    src: url('font/Shrikhand/Shrikhand-Regular.otf') format('truetype');     
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'roboto';   
+    src: url('font/roboto/Roboto-Light.ttf') format('truetype');   
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'roboto_bold';   
+    src: url('font/roboto/Roboto-Bold.ttf') format('truetype');   
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/**************************************Variables*/
+$primary: #9356DC;
+$secondary:#FF79DA;
+$third: #99E2D0;
+$grey: rgb(209, 209, 209);
+$grey_light:rgb(236, 234, 234);
+$grey_dark:rgb(66, 64, 64);
+$button_color: linear-gradient(0deg ,$primary,$secondary);
+
+/**************************************BODY*/
+body 
+{
+    margin: 0 !important;
+    margin-right: 0 !important;
+    font-family: roboto;
+    justify-items: center;
+    z-index: 1;
+}
+
+/**************************************HEADER*/ 
+header 
+{
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    box-shadow: 0 0px 5px $grey_dark;
+}
+
+#header_logo
+{
+    padding: 1rem;
+    
+}
+
+/**************************************MAIN*/
+
+#fonctionnement, #restaurants
+{
+    padding: 1rem 1rem;
+}
+
+#localisation, #presentation
+{
+    text-align: center;
+}
+
+section
+{
+    
+}
+
+h1, h2
+{
+    font-weight: bold;
+}
+
+/**************************************Localisation*/
+
+#localisation
+{
+    background-color: $grey_light;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#localisation_logo
+{
+    margin-right: 1rem;
+}
+
+
+/**************************************Presentation*/
+
+#presentation
+{
+    padding: 2rem;
+}
+
+h1
+{
+   margin: 0;
+}
+
+#tagline
+{
+    padding: 2rem;    
+}
+
+
+#button_exploration
+{
+    background-image: $button_color;   
+    border-radius: 25px;
+    border:0;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 5px 5px 7px $grey;
+    position: relative;
+    z-index: 1;
+
+    &:hover{
+        box-shadow: 5px 5px 7px $grey_dark ;          
+        transition: 0.5s;  
+
+        & #button_exploration_2{
+            opacity:1;                          
+        }
+    }    
+
+    &_2
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 25px;
+        background-image: linear-gradient(0deg ,#b588ec,#f382d3);
+        opacity: 0; 
+        z-index: -1;
+        transition: opacity 250ms;          
+    }
+}
+
+/**************************************Fonctionnement*/
+
+h2
+{
+  
+}
+
+.fonctionnement_bloc
+{
+    display: flex;
+    background-color: $grey_light;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px $grey;
+
+    &_num{    
+        position: absolute;
+        left:1.2rem;
+        
+        padding: 0.13rem;
+        margin-right: 0.5rem;
+        border-radius: 100px;
+        background-color: $primary;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.fonctionnement_bloc_logo, .fonctionnement_bloc_text
+{
+    padding-left: 0.5rem;
+}
+
+
+
+/**************************************Restaurants*/
+
+#restaurants
+{
+    background-color: $grey_light;
+}
+
+.restaurants_bloc
+{
+    background-color: white;
+    border-radius: 15px;
+    
+    margin: 1rem 0rem;
+}
+
+.restaurants_image
+{    
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.restaurant_bloc_text
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+h3
+{
+    font-weight: bold;  
+    margin:  0.5rem 0;
+}
+
+.restaurant_bloc_text_logo
+{
+    
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.logo_heart
+{
+    transition-duration: .25s;
+    display: flex;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/**************************************FOOTER*/
+
+footer {
+background-color: $grey_dark;
+
+width: 100%;
+bottom: 0;
+
+color: white;
+}
+
+#footer_text
+{
+    padding: 0 1rem;
+}
+
+/*# sourceMappingURL=ohmyfood_menu.css.map */
