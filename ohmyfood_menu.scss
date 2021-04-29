@@ -1,0 +1,656 @@
+@font-face
+{
+    font-family: 'shrikhand';   
+    src: url('font/Shrikhand/Shrikhand-Regular.otf') format('truetype');     
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'roboto';   
+    src: url('font/roboto/Roboto-Light.ttf') format('truetype');   
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'roboto_bold';   
+    src: url('font/roboto/Roboto-Bold.ttf') format('truetype');   
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*reset
+* {margin:0; padding:0;}*/
+
+
+/**************************************Variables*/
+$primary: #9356DC;
+$secondary:#FF79DA;
+$third: #99E2D0;
+$grey: rgb(209, 209, 209);
+$grey_light:rgb(236, 234, 234);
+$grey_dark:rgb(66, 64, 64);
+$button_color: linear-gradient(0deg ,$primary,$secondary);
+
+/**************************************KEYFRAMES*/
+
+@keyframes itemAppear {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+@keyframes loadingspinner {
+0% {
+    transform: scaleX(1)
+}
+100% {
+    transform: scaleX(0);
+}
+}
+
+@keyframes loadingspinner_bar {
+    0% {
+        transform: scaleX(0)
+    }
+    100% {
+        transform: scaleX(1);
+    }
+    }
+
+/**************************************BODY*/
+body 
+{
+    margin: 0 !important;
+    margin-right: 0 !important;
+    font-family: roboto;
+    justify-items: center;
+    z-index: 1;
+}
+
+a
+{
+    text-decoration:none;
+    color: black;
+}
+
+
+
+
+button
+{
+    background-color: transparent;
+
+    &:focus
+    {
+        outline-style:none;
+
+    }
+}
+
+/**************************************HEADER*/ 
+header 
+{
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 0px 5px  $grey_dark;
+}
+
+#header_logo
+{
+    padding: 1rem;  
+}
+
+#header_logo_ohmyfood
+{
+    display:block;
+    max-width:50%;
+    margin: auto;
+    justify-content: center;
+}
+
+
+/**************************************MAIN*/
+
+#fonctionnement, #restaurants
+{
+    padding: 1rem 1rem;
+}
+
+#localisation, #presentation
+{
+    text-align: center;
+}
+
+h1, h2
+{
+    font-weight: bold;
+}
+
+/**************************************Localisation*/
+
+#localisation
+{
+    background-color: $grey_light;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#localisation_logo
+{
+    margin-right: 1rem;
+}
+
+
+/**************************************Presentation*/
+
+#presentation
+{
+    padding: 2rem;
+}
+
+h1
+{
+   margin: 0;
+}
+
+#tagline
+{
+    padding: 0.5rem;    
+}
+
+
+#button_exploration
+{
+    background-image: $button_color;   
+    border-radius: 25px;
+    border:0;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 5px 5px 7px $grey;
+    position: relative;
+    z-index: 1;
+
+    &:hover{
+        box-shadow: 5px 5px 7px $grey_dark ;          
+        transition: 0.5s;  
+
+        & #button_exploration_2{
+            opacity:1;                          
+        }
+    }    
+
+    &_2
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 25px;
+        background-image: linear-gradient(0deg ,#b588ec,#f382d3);
+        opacity: 0; 
+        z-index: -1;
+        transition: opacity 250ms;          
+    }
+}
+
+/**************************************Functioning*/
+
+.fonctionnement_bloc
+{
+    display: flex;
+    background-color: $grey_light;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px $grey;
+
+    &_num{    
+        position: absolute;
+        left:1.2rem;
+        padding: 0.13rem;
+        margin-right: 0.5rem;
+        border-radius: 100px;
+        background-color: $primary;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.fonctionnement_bloc_logo, .fonctionnement_bloc_text
+{
+    padding-left: 0.5rem;
+}
+
+/**************************************Restaurants*/
+
+#restaurants
+{
+    background-color: $grey_light;
+}
+
+.restaurants_bloc
+{
+    background-color: white;
+    border-radius: 15px;
+    
+    margin: 1rem 0rem;
+}
+
+.restaurants_bloc_image
+{
+   max-height: 232px;
+   height: 232px;
+   overflow:hidden;
+   display:flex;
+}
+
+
+
+.restaurants_image
+{    
+    height: auto;
+    width: 100%;
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.restaurant_bloc_text
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+h3
+{
+    font-weight: bold;  
+    margin:  0.5rem 0;
+}
+
+.restaurant_bloc_text_logo
+{
+    background-color: white;   
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;    
+}
+
+
+
+/**************************************FOOTER*/
+
+footer {
+background-color: $grey_dark;
+width: 100%;
+bottom: 0;
+color: white;
+}
+
+#footer_container
+{
+    padding: 1rem;
+}
+
+.footer_text_titles
+{
+    display: flex;
+    padding: 0.25rem;
+}
+
+
+.footer_text_titles_logo
+{
+    width: 2rem;
+}
+/*# sourceMappingURL=ohmyfood_menu.css.map */
+
+
+
+/**************************************MENU PAGE******************/
+/*****************************************************************/
+#body_menu
+{
+    position: relative;
+    z-index: 1000;
+}
+
+#menu_h2
+{
+    font-family: shrikhand;
+}
+
+
+#section_menu
+{
+    position: relative;
+}
+
+/************************HEADER******************/
+
+
+#button_back
+{   
+    position: absolute;
+    bottom: 1rem;
+    left:2rem;
+    font-size: 1.5rem;
+}
+
+/************************MAIN IMAGE******************/
+
+.menu_main_image
+{   
+    width: 100%;
+    max-height: 254px;
+    margin-bottom: -35px;
+    z-index: -1;
+
+    &_image
+        {
+            max-width: 100%;
+            object-fit: cover;
+        }
+}
+
+#menu_main_image2
+{
+    margin-top: -100px;
+}
+
+/************************DETAILED MENU ******************/
+
+#detailed_menu
+{
+    background-color: $grey_light;
+    
+    border-radius: 15px 15px 0 0 ;
+    display: block;
+    z-index: 1;
+    position: relative;    
+    width: 100%;
+
+    &_container
+        {
+            padding: 1rem 2rem 2rem  2rem ;
+            position: relative;
+        }
+
+    &_header 
+        {
+            display: flex;
+            justify-content: space-between ;
+
+            &_logo
+                {
+                    margin: auto 0; 
+                    border: none;
+                }
+        }
+}
+
+.logo_heart
+{
+   font-size: 2rem; 
+   position: relative; 
+   z-index: 1;
+   
+    &:hover
+    {          
+        transition: 0.5s;
+        
+        
+
+        & .logo_heart_colored
+            {                
+                opacity: 1;  
+                  
+            }
+    }
+
+    &_colored
+    {
+        opacity: 0;
+        z-index: 0;
+        position:absolute;  
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: opacity 400ms;
+        color: $primary; 
+    }
+}
+
+/************************DETAILED MENU RESPONSIVE  ******************/
+
+@media screen and (min-width: 900px) 
+{
+    
+    #menu_main_image
+    {
+        max-height: 850px;
+    }
+    
+    #detailed_menu
+    {
+        max-width: 70%;
+       
+        margin: auto;
+    }
+}
+
+.menu_h3
+{
+    position: relative;
+    padding-bottom: 0.6rem;
+    margin-top: 2rem;
+
+    &::after
+    {
+        content: "";
+        width: 3rem;
+        height: .25rem;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+
+.sub_menu_bloc
+{
+    background-color: white;
+    
+    display: flex;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px $grey;
+    margin: 2rem 0 0 0;
+    overflow: hidden;
+    cursor: pointer;
+    justify-content: space-between;
+
+    &_text
+    {
+        display: inline-block;          
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 1rem;
+        flex: 1;
+
+        &_title
+            {
+                margin:0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            } 
+            
+        &_description
+            {          
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+    
+        &_dishes_price
+        {           
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-weight: bold;
+            margin: auto 0;
+            padding-left: 1rem;            
+            transition:  transform 1s;
+        }
+
+
+        &_dishes_logo
+            {
+                background-color: $third;
+                margin: -1rem -5rem -1rem 1rem;
+                width: 4rem;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                transition-duration: 0.5s;
+                
+            
+                &_logo
+                    {
+                        margin: 1.5rem 0.5rem;
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+            }
+
+    &:hover + .sub_menu_bloc_text_dishes_price
+        {
+              
+        & + .sub_menu_bloc_text_dishes_logo
+            {              
+                margin: 0;                                                  
+            }
+        }
+    }
+}
+
+#menu_button_commander
+{
+    padding: 0 0 2rem 0;
+    margin: auto;
+    text-align: center;
+}
+
+#footer_menu 
+{    
+    /*position: relative;
+    z-index: 3;*/
+    display: block;
+
+    &_logo
+    {
+        font-family: shrikhand;   
+        font-size: 1.3rem;
+        padding-bottom: 0.7rem;
+        
+    }
+}
+
+
+
+/************************ANIMATIONS  ******************/
+
+#loading_spinner
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0,0%,100%,.9);
+    animation: loadingspinner .1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_bar
+        {           
+            padding: 1px;
+            border: 1px black solid;
+          
+            &_progress
+                {
+                    display: flex;
+                    width: 8rem;
+                    height: 1.2rem;
+                    background-color: $primary; 
+                    transform-origin: 0% 50%; 
+                    transition-timing-function: ease-in;              
+                    animation: loadingspinner_bar 2s;                  
+                }
+        }
+}
+
+#sub_menu1
+{
+    animation-delay: 0.2s; 
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(1);
+    max-width: 100%;
+}
+
+#sub_menu2
+{
+    animation-delay: 0.4s;
+    animation: itemAppear 1.6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(1);
+    max-width: 100%;
+}
+
+#sub_menu3
+{
+    animation-delay: 0.6s;
+    animation: itemAppear 2.6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(1);
+    max-width: 100%;
+}
