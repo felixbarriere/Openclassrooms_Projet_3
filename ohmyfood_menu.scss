@@ -1,3 +1,56 @@
+/**************************** CSS RESET **********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**************************** ! CSS RESET ********************/
+
 @font-face
 {
     font-family: 'shrikhand';   
@@ -32,6 +85,7 @@ $secondary:#FF79DA;
 $third: #99E2D0;
 $grey: rgb(209, 209, 209);
 $grey_light:rgb(236, 234, 234);
+$grey_lighter:rgb(247, 244, 244);
 $grey_dark:rgb(66, 64, 64);
 $button_color: linear-gradient(0deg ,$primary,$secondary);
 
@@ -83,8 +137,6 @@ a
 }
 
 
-
-
 button
 {
     background-color: transparent;
@@ -128,6 +180,11 @@ header
     padding: 1rem 1rem;
 }
 
+#fonctionnement > h2 
+{
+    font-family: roboto_bold;
+}
+
 #localisation, #presentation
 {
     text-align: center;
@@ -136,6 +193,12 @@ header
 h1, h2
 {
     font-weight: bold;
+}
+
+h2
+{
+    font-size: 1.5rem;
+    padding: 1rem 0;
 }
 
 /**************************************Localisation*/
@@ -160,16 +223,23 @@ h1, h2
 #presentation
 {
     padding: 2rem;
+    background-color: $grey_lighter;
 }
+
+#presentation
+
 
 h1
 {
    margin: 0;
+   font-size: 1.5rem;
+   font-family: roboto_bold;
 }
 
 #tagline
 {
-    padding: 0.5rem;    
+    padding: 0.5rem;
+    margin-top: 1rem;    
 }
 
 
@@ -179,6 +249,7 @@ h1
     border-radius: 25px;
     border:0;
     padding: 1rem;
+    margin: 1rem 0;
     font-weight: 600;
     font-size: 1rem;
     color: white;
@@ -203,12 +274,14 @@ h1
         bottom: 0;
         left: 0;
         border-radius: 25px;
-        background-image: linear-gradient(0deg ,#b588ec,#f382d3);
+        background-image: linear-gradient(0deg ,#aa64ff,#ff88dd);
         opacity: 0; 
         z-index: -1;
         transition: opacity 250ms;          
     }
 }
+
+
 
 /**************************************Functioning*/
 
@@ -247,7 +320,14 @@ h1
 #restaurants
 {
     background-color: $grey_light;
+
+    &>h2 
+    {
+        font-family: roboto_bold;
+    }
 }
+
+
 
 .restaurants_bloc
 {
@@ -345,6 +425,8 @@ color: white;
 #menu_h2
 {
     font-family: shrikhand;
+    font-size: 1.5rem;
+    padding: 1rem 0;
 }
 
 
@@ -423,6 +505,8 @@ color: white;
    z-index: 1;
    //opacity: 1; 
    
+
+   //pseudoclass doit etre sur un lien : ".logo_heart n'en est pas un"
     &:hover
     {          
         transition: 0.5s;
@@ -433,7 +517,7 @@ color: white;
 
         & .logo_heart_colored
             {                
-                opacity: 1;                  
+                opacity: 1;              
             }
     }
 
