@@ -421,17 +421,19 @@ color: white;
    font-size: 2rem; 
    position: relative; 
    z-index: 1;
+   //opacity: 1; 
    
     &:hover
     {          
         transition: 0.5s;
-        
-        
+        //opacity: 0; 
+        background: $button_color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;   
 
         & .logo_heart_colored
             {                
-                opacity: 1;  
-                  
+                opacity: 1;                  
             }
     }
 
@@ -445,7 +447,9 @@ color: white;
         bottom: 0;
         left: 0;
         transition: opacity 400ms;
-        color: $primary; 
+        background: $button_color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
