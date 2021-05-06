@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="ohmyfood_menu.css" />
         <title>Oh My Food - Accueil</title>
-        <link rel="shortcut icon" type="image/png" href="" />
+        <link rel="shortcut icon" type="image/png" href="#" />
         <script src="https://kit.fontawesome.com/de67e9dd03.js" crossorigin="anonymous"></script>
         
     </head>
@@ -21,7 +21,7 @@
 
 
         <header>       
-            <div id="header_logo"><img src="images/logo/ohmyfood.png" id="header_logo_ohmyfood"></div>
+            <div id="header_logo"><img src="images/logo/ohmyfood.png" id="header_logo_ohmyfood" alt="header_logo_ohmyfood"></div>
         </header>
 
         <section>
@@ -39,7 +39,7 @@
                 
                 <button id="button_exploration">
                     Explorer nos restaurants
-                    <div id="button_exploration_2"></div>
+                    <span id="button_exploration_2"></span>
                 </button>
             </section>
 
@@ -69,92 +69,94 @@
 
 <!------------------ RESTAURANTS ------------------> 
 
-            <ul id="restaurants">
+            <div id="restaurants">
                 <h2>Restaurants</h2>
-                <li>
-                    <a href="ohmyfood_menu1.html">
-                        <div class="restaurants_bloc" >
-                            <div class="restaurants_bloc_image"><img src="images/restaurants/restaurant1.jpg" class="restaurants_image"></div>
-                            <div class="restaurant_bloc_text">
-                                <div class="restaurant_bloc_text_description">
-                                    <h3>La palette du goût</h3>
-                                    <div class="restaurant_bloc_text_localisation">Ménilmontant</div>
-                                </div>
-                                <div class="restaurant_bloc_text_logo">
-                                    <button id="detailed_menu_header_logo">
-                                        <i class="far fa-heart logo_heart">
-                                            <i class="fas fa-heart logo_heart_colored"></i>
-                                        </i>                                       
-                                    </button>                       
-                                </div>
-                            </div> 
-                        
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="ohmyfood_menu2.html">
-                        <div class="restaurants_bloc">
-                            <div class="restaurants_bloc_image"> 
-                                <img src="images/restaurants/restaurant2.jpg" class="restaurants_image">          
-                            </div>  
-                            <div class="restaurant_bloc_text">
-                                <div class="restaurant_bloc_text_description">
-                                    <h3>La note enchantée</h3>
-                                    <div class="restaurant_bloc_text_localisation">Charonne</div>
-                                </div>
-                                <div class="restaurant_bloc_text_logo">
-                                    <button id="detailed_menu_header_logo">
-                                        <i class="far fa-heart logo_heart">
-                                            <i class="fas fa-heart logo_heart_colored"></i>
-                                        </i>                                       
-                                    </button>                       
-                                </div>
-                            </div> 
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="ohmyfood_menu3.html">
-                        <div class="restaurants_bloc">
-                            <div class="restaurants_bloc_image"><img src="images/restaurants/restaurant3.jpg" class="restaurants_image"></div>
-                            <div class="restaurant_bloc_text">
-                                <div class="restaurant_bloc_text_description">
-                                    <h3>A la française</h3>
-                                    <div class="restaurant_bloc_text_localisation">Cité Rouge</div>
-                                </div>
-                                <div class="restaurant_bloc_text_logo">
-                                    <button id="detailed_menu_header_logo">
-                                        <i class="far fa-heart logo_heart">
-                                            <i class="fas fa-heart logo_heart_colored"></i>
-                                        </i>                                       
-                                    </button>                       
-                                </div>
-                            </div> 
-                        </div>
-                    </a>
-                </li>
-                <li></li>
-                    <a href="ohmyfood_menu4.html">
-                        <div class="restaurants_bloc">
-                            <div class="restaurants_bloc_image"><img src="images/restaurants/restaurant4.jpg" class="restaurants_image"></div>
-                            <div class="restaurant_bloc_text">
-                                <div class="restaurant_bloc_text_description">
-                                    <h3>Le délisse des sens</h3>
-                                    <div class="restaurant_bloc_text_localisation">Folie-Méricourt</div>
-                                </div>
-                                <div class="restaurant_bloc_text_logo">
-                                    <button id="detailed_menu_header_logo">
-                                        <i class="far fa-heart logo_heart">
-                                            <i class="fas fa-heart logo_heart_colored"></i>
-                                        </i>                                       
-                                    </button>                       
-                                </div>
-                            </div> 
-                        </div>
-                    </a>
-                </li>
-            </ul>
+                <ul>
+                    <li>
+                        <a href="ohmyfood_menu1.html">
+                            <div class="restaurants_bloc" >
+                                <div class="restaurants_bloc_image"><img src="images/restaurants/restaurant1.jpg" class="restaurants_image" alt="restaurants_image"></div>
+                                <div class="restaurant_bloc_text">
+                                    <div class="restaurant_bloc_text_description">
+                                        <h3>La palette du goût</h3>
+                                        <div class="restaurant_bloc_text_localisation">Ménilmontant</div>
+                                    </div>
+                                    <div class="restaurant_bloc_text_logo">
+                                        <span class="detailed_menu_header_logo">
+                                            <i class="far fa-heart logo_heart">
+                                                <i class="fas fa-heart logo_heart_colored"></i>
+                                            </i>                                       
+                                        </span>                       
+                                    </div>
+                                </div> 
+                            
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ohmyfood_menu2.html">
+                            <div class="restaurants_bloc">
+                                <div class="restaurants_bloc_image"> 
+                                    <img src="images/restaurants/restaurant2.jpg" class="restaurants_image" alt="restaurants_image">          
+                                </div>  
+                                <div class="restaurant_bloc_text">
+                                    <div class="restaurant_bloc_text_description">
+                                        <h3>La note enchantée</h3>
+                                        <div class="restaurant_bloc_text_localisation">Charonne</div>
+                                    </div>
+                                    <div class="restaurant_bloc_text_logo">
+                                        <span class="detailed_menu_header_logo">
+                                            <i class="far fa-heart logo_heart">
+                                                <i class="fas fa-heart logo_heart_colored"></i>
+                                            </i>                                       
+                                        </span>                       
+                                    </div>
+                                </div> 
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ohmyfood_menu3.html">
+                            <div class="restaurants_bloc">
+                                <div class="restaurants_bloc_image"><img src="images/restaurants/restaurant3.jpg" class="restaurants_image" alt="restaurants_image3"></div>
+                                <div class="restaurant_bloc_text">
+                                    <div class="restaurant_bloc_text_description">
+                                        <h3>A la française</h3>
+                                        <div class="restaurant_bloc_text_localisation">Cité Rouge</div>
+                                    </div>
+                                    <div class="restaurant_bloc_text_logo">
+                                        <span class="detailed_menu_header_logo">
+                                            <i class="far fa-heart logo_heart">
+                                                <i class="fas fa-heart logo_heart_colored"></i>
+                                            </i>                                       
+                                        </span>                       
+                                    </div>
+                                </div> 
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ohmyfood_menu4.html">
+                            <div class="restaurants_bloc">
+                                <div class="restaurants_bloc_image"><img src="images/restaurants/restaurant4.jpg" class="restaurants_image" alt="restaurants_image4"></div>
+                                <div class="restaurant_bloc_text">
+                                    <div class="restaurant_bloc_text_description">
+                                        <h3>Le délisse des sens</h3>
+                                        <div class="restaurant_bloc_text_localisation">Folie-Méricourt</div>
+                                    </div>
+                                    <div class="restaurant_bloc_text_logo">
+                                        <span class="detailed_menu_header_logo">
+                                            <i class="far fa-heart logo_heart">
+                                                <i class="fas fa-heart logo_heart_colored"></i>
+                                            </i>                                       
+                                        </span>                       
+                                    </div>
+                                </div> 
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
 <!------------------ FOOTER ------------------> 
