@@ -248,7 +248,7 @@ h1
     background-image: $button_color;   
     border-radius: 25px;
     border:0;
-    padding: 1rem;
+    padding: 0.8rem 3rem;
     margin: 1rem 0;
     font-weight: 600;
     font-size: 1rem;
@@ -404,6 +404,7 @@ color: white;
 {
     display: flex;
     padding: 0.25rem;
+    cursor: pointer;
 }
 
 
@@ -413,10 +414,14 @@ color: white;
 }
 /*# sourceMappingURL=ohmyfood_menu.css.map */
 
+#footer_contact
+{
+    color:white;
+}
 
 
 /**************************************MENU PAGE******************/
-/*****************************************************************/
+/**************************************BODY******************/
 #body_menu
 {
     position: relative;
@@ -513,10 +518,7 @@ color: white;
    position: relative; 
    z-index: 1;
    
-   //opacity: 1; 
-   
-
-   //pseudoclass doit etre sur un lien : ".logo_heart n'en est pas un"
+  
     &:hover
     {          
         transition: 0.5s;
@@ -585,6 +587,11 @@ color: white;
     }
 }
 
+h4
+{
+    font-family: roboto_bold;
+    font-size: 1.2rem;
+}
 
 
 .sub_menu_bloc
@@ -606,6 +613,7 @@ color: white;
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 1rem;
+        padding-right: 0;
         flex: 1;
 
         &_title
@@ -618,6 +626,7 @@ color: white;
             
         &_description
             {          
+                padding-top: 0.4rem;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -631,7 +640,7 @@ color: white;
             align-items: flex-end;
             font-weight: bold;
             margin: auto 0;
-            padding-left: 1rem;            
+            padding-left: 0.5rem;            
             transition:  transform 1s;
         }
 

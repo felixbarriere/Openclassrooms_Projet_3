@@ -200,7 +200,7 @@ h2 {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   border-radius: 25px;
   border: 0;
-  padding: 1rem;
+  padding: 0.8rem 3rem;
   margin: 1rem 0;
   font-weight: 600;
   font-size: 1rem;
@@ -326,6 +326,7 @@ footer {
 .footer_text_titles {
   display: flex;
   padding: 0.25rem;
+  cursor: pointer;
 }
 
 .footer_text_titles_logo {
@@ -333,8 +334,12 @@ footer {
 }
 
 /*# sourceMappingURL=ohmyfood_menu.css.map */
+#footer_contact {
+  color: white;
+}
+
 /**************************************MENU PAGE******************/
-/*****************************************************************/
+/**************************************BODY******************/
 #body_menu {
   position: relative;
   z-index: 1000;
@@ -458,6 +463,11 @@ footer {
   bottom: 0;
 }
 
+h4 {
+  font-family: roboto_bold;
+  font-size: 1.2rem;
+}
+
 .sub_menu_bloc {
   background-color: white;
   display: flex;
@@ -475,6 +485,7 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 1rem;
+  padding-right: 0;
   flex: 1;
 }
 .sub_menu_bloc_text_title {
@@ -484,6 +495,7 @@ footer {
   text-overflow: ellipsis;
 }
 .sub_menu_bloc_text_description {
+  padding-top: 0.4rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -495,7 +507,7 @@ footer {
   align-items: flex-end;
   font-weight: bold;
   margin: auto 0;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   transition: transform 1s;
 }
 .sub_menu_bloc_text_dishes_logo {
